@@ -1,0 +1,37 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header{
+	font-size:50px;
+  height: 100px;
+  width: auto;
+  background-color: blue;
+  float:top;
+}
+
+.sidebar{
+  height: 700px;
+  width:25%;
+	float:left;
+	background-color:green;
+}
+
+.content{
+	font-size:25px;
+	height: 700px;
+	background-color:orange;
+}
+
+.footer{
+  height: 100px;
+	background-color:yellow;
+	float:bottom;
+}
+
+.page{
+	width: 90%;
+	margin:0 auto;
+}
