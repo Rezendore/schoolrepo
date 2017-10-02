@@ -1,0 +1,24 @@
+div
+{
+	margin:20px auto;
+	width:500px;
+	text-align:center;
+	box-sizing:border-box;
+	padding:10px;
+	border:1px solid black;
+}
+.on
+{
+	color:blue;
+	background-color:white;
+}
+.off
+{
+	color:red;
+	background-color:black;
+}
+
+body
+{
+	background-color:black;
+}
