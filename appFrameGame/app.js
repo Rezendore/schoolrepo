@@ -4,32 +4,31 @@
 var guess = 0;
 var answer = 0;
 var count = -1;
-
-function MakeGuess()
-{
-	count++;
-	guess = parseInt(document.getElementById("guess").value);
-	answer = parseInt(document.getElementById("answer").value);
-	
-	if(guess === answer)
-	{
-		document.getElementById("result").innerHTML=("Correct! It took " + count + " guesses.");
-	}else if(guess > answer)
-	{
-		document.getElementById("result").innerHTML="Too high!";
-	}
-	else if(guess < answer)
-	{
-		document.getElementById("result").innerHTML="Too low!";
-	}
-	else
-	{}
-	
-}
 	
 function MyApp()
 {
-	MakeGuess();
+	function MakeGuess()
+	{
+		count++;
+		guess = parseInt(document.getElementById("guess").value);
+		answer = parseInt(document.getElementById("answer").value);
+		
+		if(guess === answer)
+		{
+			document.getElementById("result").innerHTML=("Correct! It took " + count + " guesses.");
+		}else if(guess > answer)
+		{
+			document.getElementById("result").innerHTML="Too high!";
+		}
+		else if(guess < answer)
+		{
+			document.getElementById("result").innerHTML="Too low!";
+		}
+		else
+		{}
+		
+	}
+	
 	var version = "v1.0";
 
 	// creating a private function
@@ -43,6 +42,8 @@ function MyApp()
 	{
 		$("#app>header").append(version);
 		setStatus("ready");
+		
+		$("#guess").on("click",MakeGuess());
 	};
 } // end MyApp
 
