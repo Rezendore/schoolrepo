@@ -43,7 +43,7 @@ function MyApp()
 		$("#app>header").append(version);
 		setStatus("ready");
 		
-		$("#guess").on("click",MakeGuess());
+		$("#guess").click(MakeGuess());
 	};
 } // end MyApp
 
