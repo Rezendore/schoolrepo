@@ -10,7 +10,7 @@ function MyApp()
 	var count = -1;
 	
 	function num(){
-		answer = parseInt(document.getElementById("answer").value);
+		answer = parseInt(document.getElementById("ans").value);
 	}
 	
 	function MakeGuess()
