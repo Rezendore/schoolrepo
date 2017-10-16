@@ -5,8 +5,8 @@
 	
 function MyApp()
 {
-	var guess=0;
-	var answer=0;
+	var guess;
+	var answer;
 	var count = -1;
 	
 	function num(){
