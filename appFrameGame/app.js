@@ -8,8 +8,8 @@ var count = 0;
 function MakeGuess()
 {
 	count++;
-	guess = parse.int(document.getElementById("guess").value);
-	answer = parse.int(document.getElementById("answer").value);
+	guess = parseInt(document.getElementById("guess").value);
+	answer = parseInt(document.getElementById("answer").value);
 	
 	if(guess=="")
 	{
