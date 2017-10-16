@@ -11,10 +11,10 @@ function MakeGuess()
 	guess = parseInt(document.getElementById("guess").value);
 	answer = parseInt(document.getElementById("answer").value);
 	
-	if(guess==-1)
+	if(guess=-1)
 	{
 		document.getElementById("result").innerHTML="Make A Guess!";
-	}else if(guess == answer)
+	}else if(guess = answer)
 	{
 		document.getElementById("result").innerHTML="Correct!";
 		document.getElementById("result").innerHTML.append(" It took " + count + " guesses.");
