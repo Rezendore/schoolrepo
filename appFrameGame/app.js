@@ -7,10 +7,10 @@ function MyApp()
 {
 	var guess;
 	var answer;
-	var count = -1;
+	var count = 0;
 	
 	function num(){
-		answer = parseInt(document.getElementById("ans").value);
+		answer = parseInt(document.getElementById("answer").value);
 	}
 	
 	function MakeGuess()
@@ -48,7 +48,7 @@ function MyApp()
 		$("#app>header").append(version);
 		setStatus("ready");
 		
-		$("#v").on("click", num);
+		$("#answerBtn").on("click", num);
 		$("#guessBtn").on("click", MakeGuess);
 	};
 } // end MyApp
