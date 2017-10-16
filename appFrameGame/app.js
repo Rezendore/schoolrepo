@@ -48,7 +48,7 @@ function MyApp()
 		$("#app>header").append(version);
 		setStatus("ready");
 		
-		$("v").on("click", num);
+		$("#v").on("click", num);
 		$("#guessBtn").on("click",MakeGuess);
 	};
 } // end MyApp
