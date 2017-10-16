@@ -10,7 +10,7 @@ function MyApp()
 	
 	if(guess="")
 	{
-	}eise if(guess == answer)
+	}else if(guess == answer)
 	{
 		document.getElementById("result").innerHTML="Correct!";
 	}else if(guess > answer)
