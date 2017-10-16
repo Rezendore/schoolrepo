@@ -8,11 +8,15 @@ function MyApp()
 	var guess=0;
 	var answer=0;
 	var count = -1;
+	
+	function num(){
+		answer = parseInt(document.getElementById("answer").value);
+	}
+	
 	function MakeGuess()
 	{
 		count++;
 		guess = parseInt(document.getElementById("guess").value);
-		answer = parseInt(document.getElementById("answer").value);
 		
 		if(guess === answer)
 		{
@@ -44,7 +48,8 @@ function MyApp()
 		$("#app>header").append(version);
 		setStatus("ready");
 		
-		$("#guessBtn").on("click",MakeGuess());
+		$("v").on("click", num);
+		$("#guessBtn").on("click",MakeGuess);
 	};
 } // end MyApp
 
