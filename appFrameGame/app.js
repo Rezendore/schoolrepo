@@ -3,11 +3,13 @@
 // using a function contructor form to create an object
 var guess = 0;
 var answer = 0;
+var count = 0;
 
 function MakeGuess()
 {
-	guess = document.getElementById("guess").value;
-	answer = document.getElementById("answer").value;
+	count++;
+	guess = parse.int(document.getElementById("guess").value);
+	answer = parse.int(document.getElementById("answer").value);
 	
 	if(guess=="")
 	{
@@ -15,6 +17,7 @@ function MakeGuess()
 	}else if(guess == answer)
 	{
 		document.getElementById("result").innerHTML="Correct!";
+		document.getElementById("result").innerHTML.append(" It took " + count + " guesses.");
 	}else if(guess > answer)
 	{
 		document.getElementById("result").innerHTML="Too high!";
@@ -23,6 +26,7 @@ function MakeGuess()
 	{
 		document.getElementById("result").innerHTML="Too low!";
 	}
+	
 }
 	
 function MyApp()
