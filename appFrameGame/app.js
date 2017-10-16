@@ -1,7 +1,7 @@
 "use strict";
 
 // using a function contructor form to create an object
-var guess = null;
+var guess = -1;
 var answer = 0;
 var count = 0;
 
@@ -11,7 +11,7 @@ function MakeGuess()
 	guess = parseInt(document.getElementById("guess").value);
 	answer = parseInt(document.getElementById("answer").value);
 	
-	if(guess==null)
+	if(guess=-1)
 	{
 		document.getElementById("result").innerHTML="Make A Guess!";
 	}else if(guess === answer)
