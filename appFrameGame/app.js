@@ -18,7 +18,7 @@ function MyApp()
 		count++;
 		guess = parseInt(document.getElementById("guess").value);
 		
-		if(guess === answer)
+		if(guess == answer)
 		{
 			document.getElementById("result").innerHTML=("Correct! It took " + count + " guesses.");
 		}else if(guess > answer)
@@ -49,7 +49,7 @@ function MyApp()
 		setStatus("ready");
 		
 		$("#v").on("click", num);
-		$("#guessBtn").on("click",MakeGuess);
+		$("#guessBtn").on("click", MakeGuess);
 	};
 } // end MyApp
 
