@@ -2,11 +2,12 @@
 
 // using a function contructor form to create an object
 var guess = 0;
-var answer = document.getElementById("answer").value;
+var answer = 0;
 
 function MakeGuess()
 {
 	guess = document.getElementById("guess").value;
+	answer = document.getElementById("answer").value;
 	
 	if(guess=="")
 	{
