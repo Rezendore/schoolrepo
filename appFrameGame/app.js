@@ -9,7 +9,7 @@ function MyApp()
 	var answer;
 	var count = 0;
 	
-	function num(){
+	function MakeAnswer(){
 		answer = parseInt(document.getElementById("answer").value);
 	}
 	
@@ -18,7 +18,7 @@ function MyApp()
 		count++;
 		guess = parseInt(document.getElementById("guess").value);
 		
-		if(guess == answer)
+		if(guess === answer)
 		{
 			document.getElementById("result").innerHTML=("Correct! It took " + count + " guesses.");
 		}else if(guess > answer)
@@ -48,7 +48,7 @@ function MyApp()
 		$("#app>header").append(version);
 		setStatus("ready");
 		
-		$("#answerBtn").on("click", num);
+		$("#answerBtn").on("click", MakeAnswer);
 		$("#guessBtn").on("click", MakeGuess);
 	};
 } // end MyApp
