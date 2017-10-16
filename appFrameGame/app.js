@@ -3,7 +3,7 @@
 // using a function contructor form to create an object
 var guess = 0;
 var answer = 0;
-var count = 0;
+var count = -1;
 
 function MakeGuess()
 {
