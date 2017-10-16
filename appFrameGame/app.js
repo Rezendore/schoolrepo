@@ -1,12 +1,13 @@
 "use strict";
 
 // using a function contructor form to create an object
-var guess = 0;
-var answer;
-var count = -1;
+
 	
 function MyApp()
 {
+	var guess=0;
+	var answer=0;
+	var count = -1;
 	function MakeGuess()
 	{
 		count++;
