@@ -13,8 +13,7 @@ function MakeGuess()
 	
 	if(guess === answer)
 	{
-		document.getElementById("result").innerHTML="Correct!";
-		document.getElementById("result").innerHTML.append(" It took " + count + " guesses.");
+		document.getElementById("result").innerHTML=("Correct! It took " + count + " guesses.");
 	}else if(guess > answer)
 	{
 		document.getElementById("result").innerHTML="Too high!";
