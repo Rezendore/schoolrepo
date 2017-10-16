@@ -4,9 +4,8 @@
 var guess = 0;
 var answer = Math.floor((Math.random() * 100) + 0);
 
-function MyApp()
+function makeGuess()
 {
-	
 	guess = document.getElementById("guess").value;
 	
 	if(guess=="")
@@ -23,7 +22,11 @@ function MyApp()
 	{
 		document.getElementById("result").innerHTML="Too low!";
 	}
+}
 	
+function MyApp()
+{
+	makeGuess();
 	var version = "v1.0";
 
 	// creating a private function
