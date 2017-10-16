@@ -1,7 +1,7 @@
 "use strict";
 
 // using a function contructor form to create an object
-var guess = -1;
+var guess = 0;
 var answer = 0;
 var count = 0;
 
@@ -11,10 +11,7 @@ function MakeGuess()
 	guess = parseInt(document.getElementById("guess").value);
 	answer = parseInt(document.getElementById("answer").value);
 	
-	if(guess=-1)
-	{
-		document.getElementById("result").innerHTML="Make A Guess!";
-	}else if(guess === answer)
+	if(guess === answer)
 	{
 		document.getElementById("result").innerHTML="Correct!";
 		document.getElementById("result").innerHTML.append(" It took " + count + " guesses.");
@@ -22,10 +19,12 @@ function MakeGuess()
 	{
 		document.getElementById("result").innerHTML="Too high!";
 	}
-	else
+	else if(guess < answer)
 	{
 		document.getElementById("result").innerHTML="Too low!";
 	}
+	else
+	{}
 	
 }
 	
