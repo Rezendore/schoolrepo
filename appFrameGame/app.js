@@ -8,8 +8,9 @@ function MyApp()
 	
 	guess = document.getElementById("guess").value;
 	
-	if(guess="")
+	if(guess=="")
 	{
+		document.getElementById("result").innerHTML="Make A Guess!";
 	}else if(guess == answer)
 	{
 		document.getElementById("result").innerHTML="Correct!";
