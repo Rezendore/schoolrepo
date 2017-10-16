@@ -4,7 +4,7 @@
 var guess = 0;
 var answer = Math.floor((Math.random() * 100) + 0);
 
-function makeGuess()
+function MakeGuess()
 {
 	guess = document.getElementById("guess").value;
 	
@@ -26,7 +26,7 @@ function makeGuess()
 	
 function MyApp()
 {
-	makeGuess();
+	MakeGuess();
 	var version = "v1.0";
 
 	// creating a private function
