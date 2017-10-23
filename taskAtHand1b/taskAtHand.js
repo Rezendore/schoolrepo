@@ -33,7 +33,7 @@ function TaskAtHandApp()
 	
 	function addTaskElement(taskName)
 	{
-		 var $task = $("task-template .task").clone();
+		 var $task = $("#task-template .task").clone();
 		 $("span.task-name",$task).text(taskName);
 		 
 		 $("#task-list").append($task);
