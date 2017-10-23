@@ -36,7 +36,7 @@ function TaskAtHandApp()
 		 var $task = $("task-template .task").clone();
 		 $("span.task-name",$task).text(taskName);
 		 
-		 $("task-list").append($task);
+		 $("#task-list").append($task);
 		 
 		 $("button.delete", $task).click(function(){$task.remove(); });
 		 $("button.move-up", $task).click(function(){$task.insertBefore($tasl.prev()) });
