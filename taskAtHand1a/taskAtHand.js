@@ -1,5 +1,7 @@
 function TaskAtHandApp()
 {
+	var version = "v1.0";
+	
 	this.start = function()
 	{
 		$("#new-task-name").keypress(function(e){
