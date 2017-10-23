@@ -46,4 +46,4 @@ function TaskAtHandApp()
 $(function() {
 	window.app = new TaskAtHandApp();
 	window.app.start();
-}
+});
