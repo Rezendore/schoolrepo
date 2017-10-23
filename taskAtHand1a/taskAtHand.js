@@ -42,7 +42,7 @@ function TaskAtHandApp()
 
 		 $delete.click(function() { $task.remove(); });
 		 $moveUp.click(function() { $task.insertBefore($task.prev()); });
-		 $moveDown.click(function() { $$task.insertAfter($task.next()); });
+		 $moveDown.click(function() { $task.insertAfter($task.next()); });
 	}
 }
 $(function() {
