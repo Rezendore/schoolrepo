@@ -1,9 +1,13 @@
 function TaskAtHandApp()
 {
-	var version = "v1.0";
-	
+
 	this.start = function()
 	{
+		 var version = "v1.0";
+		 function setStatus(message)
+		 {
+			$("#app>footer").text(message);
+		 }
 		$("#new-task-name").keypress(function(e){
 			if (e.which == 13)
 			{
