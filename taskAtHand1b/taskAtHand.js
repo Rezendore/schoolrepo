@@ -46,8 +46,8 @@ function TaskAtHandApp()
 			 {
 				 $span.hide()
 					.siblings("input.task-name")
-					.val($span.text());
-					.show();
+					.val($span.text())
+					.show()
 					.focus();
 			 }
 		 });
