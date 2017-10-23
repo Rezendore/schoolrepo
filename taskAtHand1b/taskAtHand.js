@@ -38,9 +38,9 @@ function TaskAtHandApp()
 		 
 		 $("#task-list").append($task);
 		 
-		 $("button.delete", $task).click(function(){$task.remove(); });
-		 $("button.move-up", $task).click(function(){$task.insertBefore($tasl.prev()) });
-		 $("button.move-down", $task).click(function(){$task.insertAfter($tasl.next()) });
+		 $("button.delete", $task).click(function() { $task.remove(); });
+		 $("button.move-up", $task).click(function() { $task.insertBefore($task.prev()) });
+		 $("button.move-down", $task).click(function() { $task.insertAfter($task.next()) });
 		 
 		 $("span.task-name", $task).click(function() {onEditTaskName($(this)); });
 		 
