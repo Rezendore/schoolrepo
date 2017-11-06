@@ -73,7 +73,7 @@ button
 	 border-radius: 2px;
 	 opacity: 0;
 	 
-	 -webkit-transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
 	-moz-transition: all 0.25s ease;
 	-o-transition: all 0.25s ease;
 	transition: all 0.25s ease;
@@ -88,15 +88,15 @@ button
 	 height: 16px;
 	 background: url(images/icons.png);
 }
-task-list .task .tools button.delete
+#task-list .task .tools button.delete
 {
 	background-position: 0 0;
 }
-task-list .task .tools button.move-up
+#task-list .task .tools button.move-up
 {
 	background-position: -16px 0;
 }
-task-list .task .tools button.move-down
+#task-list .task .tools button.move-down
 {
 	background-position: -32px 0;
 }
@@ -115,26 +115,13 @@ task-list .task .tools button.move-down
 	transition: all 0.25s ease;
 }
 #task-list .task:hover .tools,
-#task-list .task.selected .tools
+#task-list .task .selected .tools
 {
-	opacity 1;
+	opacity: 1;
 }
 #task-name
 {
 	font-size: 1em;
 	display: block;
 	width: 98%;
-rgba()
-{
-	background-color: rgba(255,0,0,0.5);
-}
-rgb()
-{
-	background-color: rgb(255,0,0);
-	background-color: rgba(255,0,0,0.5);
-}
-hlsa()
-{
-	background-color: hsl(240,100%,50%);
-	background-color: hlsa(240,100%,50%,0.5);
 }
