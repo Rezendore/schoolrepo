@@ -82,10 +82,10 @@ button
 {
 	 margin: 0;
 	 padding: 0;
+	 border: none;
 	 color: transparent;
 	 width: 16px;
 	 height: 16px;
-	 border: none;
 	 background: url(images/icons.png);
 }
 task-list .task .tools button.delete

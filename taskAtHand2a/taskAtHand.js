@@ -57,8 +57,8 @@ function TaskAtHandApp()
 	
 	function addTaskElement(taskName)
 	{ 
-		 $task.click(function() { onSelectTask($task); });
 		 var $task = $("#task-template .task").clone();
+		 $task.click(function() { onSelectTask($task); });
 		 $("span.task-name",$task).text(taskName);
 		 
 		 $("#task-list").append($task);
