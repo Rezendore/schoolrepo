@@ -11,9 +11,7 @@ function TaskAtHandApp()
 	this.start = function()
 	{
 		$("#theme").change(onChangeTheme);
-		$("button.toggle-details",$task).click(function() {
-			toggleDetails($task);
-		});
+
 		$("#new-task-name").keypress(function(e){
 			if (e.which == 13)
 			{
@@ -91,7 +89,7 @@ function TaskAtHandApp()
 		 $("span.task-name",$task).text(taskName);
 		 
 		 $("#task-list").append($task);
-		 
+		 		$("button.toggle-details",$task).click(function() {	toggleDetails($task); });
 		 $("button.delete", $task).click(function() { removeTask($task); });
 		 $("button.move-up", $task).click(function() { moveTask($task, true); });
 		 $("button.move-down", $task).click(function() { moveTask($task, false); });
