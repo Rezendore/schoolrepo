@@ -15,7 +15,7 @@ function MyApp()
 	this.start = function()
 	{
 		$(".weather-widget");
-		$(".getWeather").click(WeatherWidget);
+		$(".getWeather").click(WeatherWidget());
 		$("#app>header").append(version);
 		setStatus("ready");
 	};
