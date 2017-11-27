@@ -4,7 +4,6 @@
 function MyApp()
 {
 	var version = "v1.0";
-
 	// creating a private function
 	function setStatus(message)
 	{
@@ -14,8 +13,9 @@ function MyApp()
 	// creating a public function
 	this.start = function()
 	{
-		$(".weather-widget");
-		$(".getWeather").click(WeatherWidget());
+		var $weather = ("#weather-widget");
+		WeatherWidget = new WeatherWidget();
+		$("#getWeather").click(function() { WeatherWidget.update(); });
 		$("#app>header").append(version);
 		setStatus("ready");
 	};

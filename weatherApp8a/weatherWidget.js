@@ -20,6 +20,7 @@ function WeatherWidget($widget)
 function populateWeather(data)
 {
 	var $observation = $("current_observation", data);
+	var $widget = null;
 	
 	$(".results header img", $widget)
 		.attr("src", $("icon_url", $observation).text());
