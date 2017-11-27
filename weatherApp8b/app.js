@@ -1,4 +1,3 @@
-
 "use strict";
 
 // using a function contructor form to create an object
@@ -26,3 +25,4 @@ $(function() {
 	window.app = new MyApp();
 	window.app.start();
 });
+

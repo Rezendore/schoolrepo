@@ -5,6 +5,7 @@ function WeatherWidget($widget)
 		$(".results", $widget).hide();
 		$(".results", $widget).show();
 		getWeatherReport();
+		getLocation();
 	};
 	
 	function getWeatherReport()
@@ -38,5 +39,22 @@ function WeatherWidget($widget)
 			$(".results", $widget).fadeIn();
 		});
 	}
+	function getLocation()
+{
+	if(navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(function(position)
+		{
+			$("#latitude").val(position.coords.latitude);
+			$("#longitude").val(position.coords.longitude);
+		},
+		function(error)
+		{
+			$("#controls .error")
+			.text("ERROR: " + error.message)
+			.slideDown();
+		});
+	}
+}
 }
 
