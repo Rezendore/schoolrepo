@@ -40,21 +40,21 @@ function WeatherWidget($widget)
 		});
 	}
 	function getLocation()
-{
-	if(navigator.geolocation)
 	{
-		navigator.geolocation.getCurrentPosition(function(position)
+		if(navigator.geolocation)
 		{
-			$("#latitude").val(position.coords.latitude);
-			$("#longitude").val(position.coords.longitude);
-		},
-		function(error)
-		{
-			$("#controls .error")
-			.text("ERROR: " + error.message)
-			.slideDown();
-		});
+			navigator.geolocation.getCurrentPosition(function(position)
+			{
+				$("#latitude").val(position.coords.latitude);
+				$("#longitude").val(position.coords.longitude);
+			},
+			function(error)
+			{
+				$("#controls .error")
+				.text("ERROR: " + error.message)
+				.slideDown();
+			});
+		}
 	}
-}
 }
 
