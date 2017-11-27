@@ -13,7 +13,7 @@ function MyApp()
 	// creating a public function
 	this.start = function()
 	{
-		var $widget = ("#weather-widget");
+		var $weather = ("#weather-widget");
 		WeatherWidget = new WeatherWidget();
 		$("#getWeather").click(function() { WeatherWidget.update(); });
 		$("#app>header").append(version);
