@@ -11,16 +11,15 @@ function WeatherWidget($widget)
 	{
 		$.get("data/weather.xml")
 			.done(function(data) 
-			{ populateWeather(data); })
+			{ populateWeather(data, $widget); })
 				.fail(function(jqXHR, textStatus, errorThrown) 
 				{ showError(errorThrown); });
 	}
 }
 
-function populateWeather(data)
+function populateWeather(data, $widget)
 {
 	var $observation = $("current_observation", data);
-	var $widget = null;
 	
 	$(".results header img", $widget)
 		.attr("src", $("icon_url", $observation).text());
