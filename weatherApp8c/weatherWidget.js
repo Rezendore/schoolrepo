@@ -39,9 +39,13 @@ function WeatherWidget($widget)
 		
 		$(".conditions>span").each(function(i, e)
 		{
+			
 			var $span = $(this);
 			var field = $span.data("field");
-			$(this).text(observation[field]);
+			if(observation[field] != null)
+				{ $(this).text(observation[field]); }
+			else
+				{ $(this).text("0"); }
 		});
 		
 		$(".results footer img", $widget).attr("src", observation.image);
