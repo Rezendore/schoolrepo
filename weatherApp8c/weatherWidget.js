@@ -11,14 +11,12 @@ function WeatherWidget($widget)
 	function getWeatherReport(lat, lon)
 	{
 		var coords = lat+","+lon;
-			 $.ajax({ url: "https://api.weather.gov/points/43.22,-71.53/forecast"
-			 //url: "https://api.weather.gov/points/" + coords + ".json",
-			 //dataType : "json"
-			 })
+			// example url: "https://api.weather.gov/points/43.22,-71.53/forecast"
+		$.ajax({ url: "https://api.weather.gov/points/" + coords + "/forecast" })
 			.done(function(data) 
 			{ populateWeather(data); })
 				.fail(function(jqXHR, textStatus, errorThrown) 
-				{ /*showError(errorThrown); */});
+				{ $(".controls>#error").text(errorThrown) });
 	}
 	function getCurrentWeather()
 	{
