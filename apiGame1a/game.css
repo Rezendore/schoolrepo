@@ -1,0 +1,51 @@
+*
+{
+	cursor: pointer;
+}
+footer
+{
+	background-color:lime;
+	height:20px;
+}
+body
+{
+	font: 1em Arial, Geneva, sans-serif;
+	padding: 0;
+	width:200px;
+	color:black;
+	
+}
+
+.hidden {
+	display: none;
+}
+.pregame{
+	text-align: center;
+	padding:0;
+	width:parent;
+	background-color: black;
+}
+.pregame header
+{
+	background-color:lime;
+	height:20px;
+}
+.pregame button{
+	text-align: center;
+	background-color: black;
+}
+.pregame img{
+	width:180px;
+}
+.game{
+	height:0px;
+	visibility: hidden;
+	text-align: center;
+	background-color: green;
+}
+.game header
+{
+	background-color:lime;
+	height:20px;
+}
+
