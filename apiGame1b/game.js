@@ -173,6 +173,8 @@ function Game()
 			}
 		}
 		console.log("reached score end: " + tempScore);
+		if(tempScore>21)
+			endGame();
 		return tempScore;
 	}
 	
