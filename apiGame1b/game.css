@@ -1,0 +1,76 @@
+*
+{
+	cursor: pointer;
+}
+footer
+{
+	background-color:lime;
+	height:20px;
+	width:50%;
+}
+body
+{
+	font: 1em Arial, Geneva, sans-serif;
+	padding:25%;
+	margin:auto;
+	height:100%;
+	width:100%;
+	color:black;
+	
+}
+ul
+{
+	height:120px;
+	list-style-type:none;
+}
+li
+{
+	float:left;
+	height:100%;
+}
+
+#dev{
+	height:20px;
+}
+.hidden {
+	display: none;
+}
+.pregame{
+	text-align: center;
+	padding:0;
+	height:parent;
+	width:50%;
+	background-color: black;
+}
+.pregame header
+{
+	background-color:lime;
+	height:20px;
+}
+.pregame button{
+	text-align: center;
+	background-color: black;
+}
+.pregame img{
+	width:100%;
+}
+.game{
+	display:block;
+	height:0;
+	visibility: hidden;
+	background-color: green;
+}
+.game header{
+	text-align: center;
+	background-color:lime;
+	height:20px;
+}
+.main{
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+.score{
+	text-align:bottom;
+	
+}

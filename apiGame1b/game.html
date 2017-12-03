@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cardgame</title>
+		<script src="lib/jquery-3.2.1.min.js"></script>
+		<link href="game.css" rel="StyleSheet" />
+		<script src="game.js"></script>
+	</head>
+	<body>
+		<div class="pregame">
+			<header>Open Me</header>
+			<button id="startGame">
+				<img src="http://deckofcardsapi.com/static/img/AH.png" alt="Start"/>
+			</button>
+		</div>
+		<div id="error">
+			
+		</div>
+		<div class="game">
+			<header>Cardgame</header>
+			<div class="main">
+				<div class="player">
+					<button id="hit">Hit Me</button>
+					<ul id="playerCards">
+					</ul>
+					<button id="stay">Stay</button>
+				</div>
+				<div class="dealer">
+					<ul id="dealerCards">
+					</ul>
+				</div>
+			</div>
+			<div class="scores">
+				Your Score: <span id="pScore"></span></br>
+				Dealer Score: <span id="dScore"></span>
+			</div>
+		</div>
+		<footer>Version: </footer>
+		<div id="dev">
+			
+		</div>
+	</body>
+</html>
