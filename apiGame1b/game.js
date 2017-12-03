@@ -182,7 +182,7 @@ function Game()
 
 function app()
 {
-		$("footer").append("v1.0");		// display app version
+		$("footer").append("v2.0");		// display app version
 		this.start = function()
 		{
 			console.log("arrived at app start");
