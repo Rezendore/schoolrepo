@@ -93,21 +93,27 @@ function Game()
 		
 		if(pScore<=21)
 		{
-			/*if(dScore<pScore && dScore<21)
+			for(var i = 0; i<1; i++);
 			{
-				drawCard(1,"dealer");
-				
-			}*/
-			if(dScore>21)
-			{	//dealer defaults
-				alert("Dealer defaulted, you win.");
-			}
-			else if(dScore>=pScore)
-			{	//dealer beats player
-				alert("Dealer wins");
-			}
-			else
-				alert("You win");
+				if(dScore<pScore && dScore<21)
+				{
+					drawCard(1,"dealer");
+					
+				}
+				else
+				{
+					if(dScore>21)
+					{	//dealer defaults
+						alert("Dealer defaulted, you win.");
+					}
+					else if(dScore>=pScore)
+					{	//dealer beats player
+						alert("Dealer wins");
+					}
+					else
+						alert("You win");
+						}
+					}
 		}
 		else
 		{	// player defaults
@@ -185,7 +191,7 @@ function Game()
 
 function app()
 {
-		$("footer").append("v2.1");		// display app version
+		$("footer").append("v2.2 ");		// display app version
 		this.start = function()
 		{
 			console.log("arrived at app start");
