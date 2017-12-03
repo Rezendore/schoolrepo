@@ -65,11 +65,14 @@ function Game()
 								console.log("New card drawn: " + data.cards[i].value);
 								dScore=score(dHand);
 							$("#dScore").text(dScore);
+							
 							break;
 						default:
 							break;
 					}
 				}
+				if(pScore>21 || dScore>21)
+					endGame();
 			})
 			.fail(function(jqXHR, textStatus, errorThrown) 
 			{ $(".error").text(errorThrown) });	
@@ -85,8 +88,8 @@ function Game()
 			"height": "0", "width": "0"});
 		$("footer").css( "width", "50%" );
 		*/
-		pScore = score(pHand);
-		dScore = score(dHand);
+		//pScore = score(pHand);
+		//dScore = score(dHand);
 		
 		if(pScore<=21)
 		{
@@ -173,8 +176,6 @@ function Game()
 			}
 		}
 		console.log("reached score end: " + tempScore);
-		if(tempScore>21)
-			endGame();
 		return tempScore;
 	}
 	
@@ -184,7 +185,7 @@ function Game()
 
 function app()
 {
-		$("footer").append("v2.0");		// display app version
+		$("footer").append("v2.1");		// display app version
 		this.start = function()
 		{
 			console.log("arrived at app start");
