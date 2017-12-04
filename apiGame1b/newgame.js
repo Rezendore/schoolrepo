@@ -11,7 +11,7 @@ function app()
 		{
 			console.log("arrived at app start");
 			
-			var game = new Game();	
+			var Game = new game();	
 			$("#hit").click(function(){
 				game.gameState='d' });
 			$("#stay").click(function(){
@@ -50,7 +50,7 @@ function character(Name)
 					else
 						tempScore=tempScore+11;
 					break;
-				case "2":
+				case "2": 
 					tempScore=tempScore+2;
 					break;
 				case "3":
@@ -102,7 +102,7 @@ function character(Name)
 function hand()
 {
 	var cards = [];
-	var tempCards [];
+	var tempCards = [];
 	
 	this.newCard = function(cardID)
 	{
