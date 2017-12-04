@@ -20,7 +20,7 @@ function Game()
 	function Deck()
 	{
 		console.log("arrived at newDeck");
-		var New = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6";
+		var New = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=2";
 		$.ajax({ url: New })
 			.done(function(data) 
 			{
@@ -90,12 +90,11 @@ function Game()
 		*/
 		//pScore = score(pHand);
 		//dScore = score(dHand);
-		
-		if(pScore<=21)
+		if(pScore<21)
 		{
 			for(var i = 0; i<1; i++);
 			{
-				if(dScore<pScore && dScore<21)
+				if(dScore<(pScore-2) && dScore<21)
 				{
 					drawCard(1,"dealer");
 					
@@ -112,8 +111,12 @@ function Game()
 					}
 					else
 						alert("You win");
-						}
-					}
+				}
+			}
+		}
+		else if(pScore==21)
+		{
+			alert("BlackJack");
 		}
 		else
 		{	// player defaults
