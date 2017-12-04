@@ -29,19 +29,15 @@ function app()
 				});
 		}
 }
-
-class character
+					// creates a character
+function character(Name)
 {
-	var hand = [];
+	var name = Name;
+	var hand = new hand();
 	var score = getScore();
 	var bet = 0;
-	constructor()
-	{
-		this.hand = new hand();
-		this.score = 0;
-		this.bet = 0;
-	}
-	function getScore()
+	
+	this.getScore = function()
 	{
 		var tempScore=0;
 		for( i = 0; i<hand.cards.length;i++)
@@ -86,16 +82,29 @@ class character
 					break;
 			}
 		}
-		return tempScore;
+		
+		if(name="player")
+		{
+			if(tempScore>21)
+			{
+				game.setGameState('l');
+			}
+			else if(tempScore=21)
+			{
+				game.setGameStatus('w');
+			}
+			
+			return tempScore;
+		}
 	}
 }
-
-class hand
+					// creates a hand
+function hand()
 {
 	var cards = [];
 	var tempCards [];
 	
-	function newCard(cardID)
+	this.newCard = function(cardID)
 	{
 		tempCards = cards;
 		for(var i=0;i<(cards.length+1); i++)
@@ -117,32 +126,61 @@ function drawCard()
 			.done(function(data)
 			{
 				return data.cards[0].value;
+				$("#dev").text(data.cards[0].image);
 			})
 				.fail(function(jqXHR, textStatus, errorThrown) 
 				{ $(".error").text(errorThrown) });	
 }
-
+					// initialize and operate game
 function game()
 {
-	var dealer = new character();
-	var player = new character();
+	var dealer = new character("dealer");
+	var player = new character("player");
 	var betPool = 0;
 	var gameState = 'p';
 	
-	switch(gameState)
+	newDeck();
+	
+	this.setGameState = function(state)
 	{
-		case 's':
-			dealer.hand.newCard(drawCard());
-			break;
-		case 'd':
-			player.hand.newCard(drawCard());
-			break;
-		case 'w':
-			break;
-		case 'l':
-			break;
-		default:
-			break;
+		gameState=state;
+		switch(state)
+		{
+			case 's':
+				dealer.hand.newCard(drawCard());
+				$("#playerCards").append("<li> <img style=" + "height:100%"
+					+ " src=" + $("#dev").text() + " /> </li>");
+				gameState='p';
+				break;
+			case 'd':
+				player.hand.newCard(drawCard());
+				$("#dealerCards").append("<li> <img style=" + "height:100%"
+					+ " src=" + $("#dev").text() + " /> </li>");
+				gameState='p';
+				break;
+			case 'w':
+				break;
+			case 'l':
+				break;
+			default:
+				break;
+		}
 	}
 }
 
+function newDeck()
+{
+	var New = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=2";
+	$.ajax({ url: New })
+		.done(function(data) 
+		{
+			game.dealer.hand.newCard(drawCard());
+			game.dealer.hand.newCard(drawCard());
+			game.player.hand.newCard(drawCard());
+			game.player.hand.newCard(drawCard());
+		})
+		.fail(function(jqXHR, textStatus, errorThrown) 
+			{
+				$(".error").text(errorThrown)
+			});
+}

@@ -49,7 +49,7 @@ function Game()
 						case "player":
 							$("#playerCards").append(
 								"<li> <img style=" + "height:100%" + 
-								" src=" + data.cards[i].image + " /> </li>")
+								" src=" + data.cards[i].image + " /> </li>");
 								pHand[pHandSize++]=data.cards[i].value;
 								console.log("New card drawn: " + data.cards[i].value);
 								pScore=score(pHand);

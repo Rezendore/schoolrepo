@@ -6,7 +6,7 @@ footer
 {
 	background-color:lime;
 	height:20px;
-	width:50%;
+	width:240px;
 }
 body
 {
@@ -39,7 +39,7 @@ li
 	text-align: center;
 	padding:0;
 	height:parent;
-	width:50%;
+	width:240px;
 	background-color: black;
 }
 .pregame header
